@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import logo from "../assets/logoTvaraa.jpeg";
 import gem from "../assets/gem.jpeg";
 function Header() {

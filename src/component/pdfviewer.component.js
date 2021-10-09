@@ -1,8 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState } from "react";
 import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
-import DiabeticPdf from "../assets/DiabeticAtta.pdf";
-import DiabeticAttaDetail from "../assets/DiabeticAttaDetail.pdf";
+
 function PdfViewer(props) {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(
@@ -14,15 +13,15 @@ function PdfViewer(props) {
   }
 
   const traversePage = (type) => {
-    if (type == "prev" && pageNumber > 1) {
+    if (type === "prev" && pageNumber > 1) {
       setPageNumber(pageNumber - 1);
-    } else if (type == "nxt" && pageNumber < numPages) {
+    } else if (type === "nxt" && pageNumber < numPages) {
       setPageNumber(pageNumber + 1);
     }
   };
 
   return (
-    <div className="pdfContainer">
+    <div className="pdfContainer text-center">
       <Document
         file={props.fileToBeDisplay}
         onLoadSuccess={onDocumentLoadSuccess}

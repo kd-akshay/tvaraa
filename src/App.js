@@ -20,16 +20,18 @@ function App() {
         <Product />
         <div className="row lastDiv">
           <div className="row mt-5 text-center content-header">
-            <h3>Certificates & Content</h3>
+            <h3>Certificates &amp; Content</h3>
           </div>
-          <div className="col">
-            <PdfViewer fileToBeDisplay={DiabeticPdf} pageStart={1}></PdfViewer>
-          </div>
+
           <div className="col">
             <PdfViewer fileToBeDisplay={licence} pageStart={1}></PdfViewer>
           </div>
           <div className="col">
             <PdfViewer fileToBeDisplay={Tvara} pageStart={1}></PdfViewer>
+          </div>
+
+          <div className="col">
+            <PdfViewer fileToBeDisplay={DiabeticPdf} pageStart={1}></PdfViewer>
           </div>
           <div className="col">
             <PdfViewer
